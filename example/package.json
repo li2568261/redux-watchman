@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "rollup --config rollup.config.js",
+    "showExample": "node ./dist/store.js"
+  },
+  "dependencies": {
+    "@types/redux": "^3.6.0",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "typescript": "^3.2.4"
+  }
+}

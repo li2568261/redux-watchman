@@ -1,0 +1,39 @@
+{
+  "name": "redux-watchman",
+  "scripts": {
+    "build": "rollup --config rollup.config.js"
+  },
+  "author": {
+    "name": "leekk",
+    "email": "345807438@qq.com"
+  },
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "redux middleware",
+  "keywords": [
+    "redux-watchman",
+    "watchman",
+    "redux",
+    "middleware",
+    "redux-saga",
+    "saga"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:li2568261/redux-sugar.git"
+  },
+  "dependencies": {
+    "@types/redux": "^3.6.0",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "jest": "^24.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.2.4"
+  },
+  "typings": "./typings/index.d.ts",
+  "module": "./esm/index.esm.js",
+  "main": "./lib/index.umd.js"
+}
