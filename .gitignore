@@ -1,2 +1,5 @@
 node_modules
 ./example/dist/node_modules
+cjs
+esm
+lib
