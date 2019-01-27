@@ -8,7 +8,7 @@
     "email": "345807438@qq.com"
   },
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "redux middleware",
   "keywords": [
     "redux-watchman",

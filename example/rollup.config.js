@@ -10,6 +10,8 @@ export default {
   
   plugins: [
     resolve(),
-    typescript()
+    typescript({
+      esModuleInterop: true
+    })
   ]
 }

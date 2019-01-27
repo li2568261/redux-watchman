@@ -541,23 +541,23 @@ if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' 
   warning('You are currently using minified code outside of NODE_ENV === "production". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');
 }
 
-var sugarWrap = {
+var watchmanWrap = {
     addObserver: null,
     store: null
 };
-// set sugarWarp
-var activeSugar = function (addObserver, store) {
-    Object.assign(sugarWrap, { addObserver: addObserver, store: store });
+// set WatchmanWarp
+var activeWatchman = function (addObserver, store) {
+    Object.assign(watchmanWrap, { addObserver: addObserver, store: store });
 };
-// call function after activeSugar
+// call function after activeWatchman
 var withActive = function (handler, key) {
     return function () {
         var arg = [];
         for (var _i = 0; _i < arguments.length; _i++) {
             arg[_i] = arguments[_i];
         }
-        if (sugarWrap.addObserver && sugarWrap.store) {
-            return handler.apply(void 0, arg.concat([key ? sugarWrap[key] : undefined]));
+        if (watchmanWrap.addObserver && watchmanWrap.store) {
+            return handler.apply(void 0, arg.concat([key ? watchmanWrap[key] : undefined]));
         }
         else {
             console.error('please run');
@@ -569,7 +569,7 @@ var safeBox = function (handler) {
     return handler().catch(function (e) { return e; });
 };
 
-var createSugar = function () {
+var createWatchman = function () {
     var sugar = {
         observer: {}
     };
@@ -599,7 +599,7 @@ var createSugar = function () {
     };
     var sugarMiddleware = function (store) {
         API.run = function (handler) {
-            activeSugar(addObserver, store);
+            activeWatchman(addObserver, store);
             handler();
         };
         return function (next) { return function (action) {
@@ -909,7 +909,7 @@ var root$1 = function () {
     });
 };
 
-var sugar = createSugar();
+var sugar = createWatchman();
 var store = createStore(reducer, {
     contacts: []
 }, applyMiddleware(sugar.sugarMiddleware));

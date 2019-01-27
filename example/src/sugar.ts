@@ -1,4 +1,4 @@
-import { all, put, select, take, takeEvery } from '../lib/index';
+import { all, put, select, take, takeEvery } from 'redux-watchman';
 const requestMock = function(data){
   return Promise.resolve(data);
 }

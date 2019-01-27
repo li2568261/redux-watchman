@@ -7,7 +7,7 @@ interface ISelectFun<T extends object = any>{
   (store:T):any
 }
 
-export function createSugar (): { run(task: AsyncFunction):void, sugarMiddleware: Middleware};
+export function createWatchman (): { run(task: AsyncFunction):void, sugarMiddleware: Middleware};
 export function all(asf: AsyncFunction[]): Promise<any[]>;
 export function select<T = any>(selectFuc: ISelectFun): Promise<T>;
 export function take(actionName: string): Promise<AnyAction>;

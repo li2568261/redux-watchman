@@ -1,3 +1,7 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var watchmanWrap = {
     addObserver: null,
     store: null
@@ -181,4 +185,9 @@ var takeEvery = withActive(function (actionType, handler) {
     });
 });
 
-export { createWatchman, all, put, select, take, takeEvery };
+exports.createWatchman = createWatchman;
+exports.all = all;
+exports.put = put;
+exports.select = select;
+exports.take = take;
+exports.takeEvery = takeEvery;

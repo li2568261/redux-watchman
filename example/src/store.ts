@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware } from 'redux';
-import { createSugar } from '../lib/index';
+import { createWatchman } from 'redux-watchman';
 import reducer from './reducer';
 import root from './sugar';
-const sugar = createSugar();
+const sugar = createWatchman();
 const store = createStore<{ contacts: any[]}, any, any, any>(
   reducer,
   {
