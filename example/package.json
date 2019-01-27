@@ -6,7 +6,7 @@
   "dependencies": {
     "@types/redux": "^3.6.0",
     "redux": "^4.0.1",
-    "redux-watchman": "^1.0.2"
+    "redux-watchman": "^1.0.3"
   },
   "devDependencies": {
     "rollup-plugin-node-resolve": "^4.0.0",

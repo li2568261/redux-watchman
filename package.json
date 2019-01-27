@@ -7,8 +7,14 @@
     "name": "leekk",
     "email": "345807438@qq.com"
   },
+  "files": [
+    "lib",
+    "esm",
+    "cjs",
+    "typings"
+  ],
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "redux middleware",
   "keywords": [
     "redux-watchman",
