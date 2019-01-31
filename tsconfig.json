@@ -8,5 +8,6 @@
       "dom"
     ],                             /* Specify library files to be included in the compilation. */
     "strict": true,                           /* Enable all strict type-checking options. */
+    "esModuleInterop": true
   }
 }

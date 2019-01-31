@@ -1,19 +1,19 @@
 import { createStore, applyMiddleware } from 'redux';
 import { createWatchman } from 'redux-watchman';
 import reducer from './reducer';
-import root from './sugar';
-const sugar = createWatchman();
+import root from './watchman';
+const watchman = createWatchman();
 const store = createStore<{ contacts: any[]}, any, any, any>(
   reducer,
   {
     contacts: []
   },
   applyMiddleware(
-    sugar.sugarMiddleware
+    watchman.watchmanMiddleware
   )
 )
 
-sugar.run(root);
+watchman.run(root);
 const withStoreShow = (f)=>{
   f();
   return new Promise(resolve=>{

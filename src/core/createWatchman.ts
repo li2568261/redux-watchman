@@ -36,7 +36,7 @@ const createWatchman = ()=>{
     console.error('applymiddleware before run');
   };
   
-  const sugarMiddleware:Middleware = store=>{
+  const watchmanMiddleware:Middleware = store=>{
     API.run = (handler: AsyncFunction)=>{
       activeWatchman( addObserver, store )
       handler();
@@ -52,7 +52,7 @@ const createWatchman = ()=>{
    */
   
   const API = {
-    sugarMiddleware,
+    watchmanMiddleware,
     run
   }
   
