@@ -2,3 +2,4 @@ node_modules
 cjs
 esm
 lib
+umd
